@@ -26,7 +26,7 @@ beforeEach(() => {
     cy.visit('/auth/login');
   })
 
-  it.only('Login Sucess', () => {
+  it.only('User uptade walK - Login Sucess', () => {
   
     cy.get(selectorsList.usernameField).type(userData.userSucess.username);
     cy.get(selectorsList.passwordField).type(userData.userSucess.password);
