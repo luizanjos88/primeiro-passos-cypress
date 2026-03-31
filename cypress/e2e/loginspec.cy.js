@@ -11,13 +11,13 @@ const selectorsList = {
 }
 
 
-//executa antes de cada teste
+//executa antes de cada teste -- e a baseUrl esta na config.js
 beforeEach(() => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login');
   })
 
   it('Login Sucess', () => {
-    
+  
     cy.get(selectorsList.usernameField).type(userData.userSucess.username);
     cy.get(selectorsList.passwordField).type(userData.userSucess.password);
     cy.get(selectorsList.loginButton).click();
@@ -38,6 +38,6 @@ beforeEach(() => {
     // validação de alerta
     cy.get(selectorsList.wrongCredentialAlert).contains ('Invalid credentials');
     
-
+    
   })
 })
