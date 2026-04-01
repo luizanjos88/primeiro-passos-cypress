@@ -4,11 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "report": "npx mochawesome-merge cypress/reports/*.json > report.json && npx marg report.json --reportDir cypress/reports --inline",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:repeat": "cypress-repeat run -n 5"
   },
   "author": "Luiz Carlos",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^15.13.0"
+    "cypress": "^15.13.0",
+    "cypress-repeat": "^2.3.10",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.1.1",
+    "mochawesome-report-generator": "^6.3.2"
   }
 }
