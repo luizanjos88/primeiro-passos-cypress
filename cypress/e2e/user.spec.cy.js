@@ -19,6 +19,7 @@ describe('Orange HRM Tests', () => {
     closeCalendaryButton: '.--close',
     submitButton: '[type="submit"]',
     selectionField: '.oxd-select-text',
+    dropboxField: '.oxd-select-dropdown',
     genericCheckBox: '.oxd-checkbox-wrapper',
   }
 
@@ -65,10 +66,10 @@ describe('Orange HRM Tests', () => {
     
     // Interação com componentes de dropdown (Selects personalizados do OrangeHRM)
     cy.get(selectorsList.selectionField).eq(0).click();
-    cy.get('.oxd-select-dropdown').contains('Brazilian').click(); 
+    cy.get(selectorsList.dropboxField).contains('Brazilian').click(); 
     
     cy.get(selectorsList.selectionField).eq(1).click();
-    cy.get('.oxd-select-dropdown').contains('Married').click();
+    cy.get(selectorsList.dropboxField).contains('Married').click();
 
     // Primeiro salvamento das informações (Personal Details) e verificação do Toast de sucesso
     cy.get(selectorsList.submitButton).eq(0).click();  
@@ -76,7 +77,7 @@ describe('Orange HRM Tests', () => {
 
     // Preenchimento de informações adicionais (Tipo Sanguíneo)
     cy.get(selectorsList.selectionField).eq(2).click();
-    cy.get('.oxd-select-dropdown').contains('O-').click();
+    cy.get(selectorsList.dropboxField).contains('O-').click();
 
     // Exemplo de preenchimento de campo genérico adicional
     cy.get(selectorsList.genericField).eq(9).clear().type('Text');
