@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-01T19:23:30.445Z",
+    "end": "2026-04-01T19:23:45.821Z",
+    "duration": 15376,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "874b2d3a-7434-48ac-a11c-3b0906ed55b7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\user.spec.cy.js",
+      "file": "cypress\\e2e\\user.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "630e8a40-69dc-46f0-bf0d-96b1bd243c01",
+          "title": "Orange HRM Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User update walk - Login Success",
+              "fullTitle": "Orange HRM Tests User update walk - Login Success",
+              "timedOut": null,
+              "duration": 15277,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Define a resolução da tela para evitar que elementos fiquem escondidos no modo \"cypress run\"\ncy.viewport(1920, 1080);\n// Fluxo de Autenticação utilizando dados do arquivo fixture (userData.json)\ncy.get(selectorsList.usernameField).type(_userData.default.userSucess.username);\ncy.get(selectorsList.passwordField).type(_userData.default.userSucess.password);\ncy.get(selectorsList.loginButton).click();\n// Validação de que o login funcionou através da URL e da presença do grid do Dashboard\ncy.location('pathname').should('equal', '/web/index.php/dashboard/index');\n//cy.get(selectorsList.dashboardGrid).should('be.visible');\n// Navegação para a seção de informações pessoais do usuário logado\ncy.get(selectorsList.myInfoButton).click();\n// Verificação de que o título da página mudou para PIM antes de prosseguir\n//cy.get(selectorsList.sectionTitleTopBar).contains('PIM').should('be.visible');\n// Atualização dos campos de nome com validações de estado para garantir estabilidade\ncy.get(selectorsList.firstNameField).should('be.visible').and('not.be.disabled').clear().type('Luiz');\ncy.get(selectorsList.middleNameField).clear().type('Carlos');\ncy.get(selectorsList.lastNameField).clear().type('Anjos');\n// Preenchimento de campos de identificação (ID do empregado, etc) usando índices do array de inputs\ncy.get(selectorsList.genericField).eq(3).clear().type('QA-290305');\ncy.get(selectorsList.genericField).eq(4).clear().type('205105');\ncy.get(selectorsList.genericField).eq(5).clear().type('0768099909');\n// Preenchimento de datas e fechamento manual do calendário para evitar sobreposição de elementos\ncy.get(selectorsList.dateField).eq(0).clear().type('2028-23-04');\ncy.get(selectorsList.closeCalendaryButton).click();\ncy.get(selectorsList.dateField).eq(1).clear().type('1991-23-04');\ncy.get(selectorsList.closeCalendaryButton).click();\n// Interação com componentes de dropdown (Selects personalizados do OrangeHRM)\ncy.get(selectorsList.selectionField).eq(0).click();\ncy.get(selectorsList.dropboxField).contains('Brazilian').click();\ncy.get(selectorsList.selectionField).eq(1).click();\ncy.get(selectorsList.dropboxField).contains('Married').click();\n// Primeiro salvamento das informações (Personal Details) e verificação do Toast de sucesso\ncy.get(selectorsList.submitButton).eq(0).click();\ncy.get('body').should('contain', 'Successfully Updated');\n// Preenchimento de informações adicionais (Tipo Sanguíneo)\ncy.get(selectorsList.selectionField).eq(2).click();\ncy.get(selectorsList.dropboxField).contains('O-').click();\n// Exemplo de preenchimento de campo genérico adicional\ncy.get(selectorsList.genericField).eq(9).clear().type('Text');\n// Segundo salvamento (Custom Fields) e verificação final de sucesso\ncy.get(selectorsList.submitButton).eq(1).click();\ncy.get('body').should('contain', 'Successfully Updated');",
+              "err": {},
+              "uuid": "db1d1b71-ae8a-46c7-8f3f-6c9d255ea987",
+              "parentUUID": "630e8a40-69dc-46f0-bf0d-96b1bd243c01",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "db1d1b71-ae8a-46c7-8f3f-6c9d255ea987"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15277,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "timestamp": false
+      },
+      "version": "6.3.2"
+    }
+  }
+}

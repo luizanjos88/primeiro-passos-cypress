@@ -21,6 +21,7 @@ describe('Orange HRM Tests', () => {
     selectionField: '.oxd-select-text',
     dropboxField: '.oxd-select-dropdown',
     genericCheckBox: '.oxd-checkbox-wrapper',
+    genderRadio:'.--gender-grouped-field',
   }
 
   // Comando executado antes de cada caso de teste para garantir que começamos na tela de login
@@ -45,7 +46,7 @@ describe('Orange HRM Tests', () => {
     cy.get(selectorsList.myInfoButton).click();
 
     // Verificação de que o título da página mudou para PIM antes de prosseguir
-    cy.get(selectorsList.sectionTitleTopBar).contains('PIM').should('be.visible');
+     cy.get(selectorsList.sectionTitleTopBar).contains('PIM').should('be.visible');
     
     // Atualização dos campos de nome com validações de estado para garantir estabilidade
     cy.get(selectorsList.firstNameField).should('be.visible').and('not.be.disabled').clear().type('Luiz');
@@ -66,7 +67,8 @@ describe('Orange HRM Tests', () => {
     
     // Interação com componentes de dropdown (Selects personalizados do OrangeHRM)
     cy.get(selectorsList.selectionField).eq(0).click();
-    cy.get(selectorsList.dropboxField).contains('Brazilian').click(); 
+    cy.get(selectorsList.dropboxField).contains('Brazilian').click();
+    cy.get(selectorsList.genderRadio).contains('Male').click();
     
     cy.get(selectorsList.selectionField).eq(1).click();
     cy.get(selectorsList.dropboxField).contains('Married').click();
@@ -85,6 +87,13 @@ describe('Orange HRM Tests', () => {
     // Segundo salvamento (Custom Fields) e verificação final de sucesso
     cy.get(selectorsList.submitButton).eq(1).click();  
     cy.get('body').should('contain', 'Successfully Updated');
+
+
+    cy.get('.orangehrm-tabs-wrapper').eq(1).click();
+    cy.location('pathname').should('equal','/web/index.php/pim/contactDetails/empNumber/7');
+      
+    
+
   })
 
   // Teste de caminho negativo: valida a mensagem de erro com credenciais inválidas

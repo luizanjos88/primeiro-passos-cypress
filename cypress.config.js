@@ -10,7 +10,7 @@ module.exports = defineConfig({
       overwrite: true,
       html: true,
       json: true,
-      timestamp: 'mmddyyyy_HHMMss'
+      timestamp: false, //'mmddyyyy_HHMMss'
     },
     setupNodeEvents(on, config) {
       // implement node event listeners here
