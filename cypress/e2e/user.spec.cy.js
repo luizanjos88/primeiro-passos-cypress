@@ -24,7 +24,7 @@ describe('Orange HRM Tests', () => {
     
     pages.myInfo.fillEmployeeDetails(faker.string.numeric(6),faker.string.numeric(5),faker.string.numeric(7),faker.date.future({ years: 5 }).toISOString().split('T')[0])
 
-    pages.myInfo.fillStatus(pages.utils.nationalityAleatory(),  faker.date.birthdate({ min: 18, max: 60, mode: 'age' }).toISOString().split('T')[0],'Married','Male',pages.utils.bloodTypesAleatory(), faker.string.numeric(5));
+    pages.myInfo.fillStatus(pages.utils.nationalityAleatory(),  faker.date.birthdate({ min: 18, max: 60, mode: 'age' }).toISOString().split('T')[0],pages.utils.meritalStatusAleatory(),pages.utils.genderAleatory(),pages.utils.bloodTypesAleatory(), faker.string.numeric(5));
 
     pages.myInfo.saveForm(0)
    //pages.menu.acessAdmin();
