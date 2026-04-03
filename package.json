@@ -11,10 +11,14 @@
   "author": "Luiz Carlos",
   "license": "ISC",
   "devDependencies": {
+    "@faker-js/faker": "^10.4.0",
     "cypress": "^15.13.0",
     "cypress-repeat": "^2.3.10",
     "mochawesome": "^7.1.4",
     "mochawesome-merge": "^5.1.1",
     "mochawesome-report-generator": "^6.3.2"
+  },
+  "dependencies": {
+    "chance": "^1.1.13"
   }
 }
