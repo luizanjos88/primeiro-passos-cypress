@@ -1,0 +1,226 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666667,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2026-04-01T11:07:11.828Z",
+    "end": "2026-04-01T11:10:24.133Z",
+    "duration": 192305
+  },
+  "results": [
+    {
+      "uuid": "47363424-e1ac-4da8-bab3-bceb9b152115",
+      "title": "",
+      "fullFile": "cypress\\e2e\\user.spec.cy.js",
+      "file": "cypress\\e2e\\user.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "388f4a27-70ab-411d-9a9e-14608e336f00",
+          "title": "Orange HRM Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User uptade walK - Login Sucess",
+              "fullTitle": "Orange HRM Tests User uptade walK - Login Sucess",
+              "timedOut": null,
+              "duration": 18943,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(selectorsList.usernameField).type(_userData.default.userSucess.username);\ncy.get(selectorsList.passwordField).type(_userData.default.userSucess.password);\ncy.get(selectorsList.loginButton).click();\ncy.location('pathname').should('equal', '/web/index.php/dashboard/index');\n//pode ser mudado o nome dashboard até para outra língua o que aconteceu troca\n//cy.get(selectorsList.sectionTitleTopBar).contains ('Dashboard');\ncy.get(selectorsList.dashboardGrid);\n// acessando alteração de Usuário\ncy.get(selectorsList.myInfoButton).click();\ncy.get(selectorsList.sectionTitleTopBar).contains('PIM'), cy.location('pathname').should('equal', '/web/index.php/pim/viewPersonalDetails/empNumber/7');\ncy.get(selectorsList.firstNameField).clear().type('Luiz');\ncy.get(selectorsList.middleNameField).clear().type('Carlos');\ncy.get(selectorsList.lastNameField).clear().type('Anjos');\ncy.get(selectorsList.genericField).eq(3).clear().type('QA-290305');\ncy.get(selectorsList.genericField).eq(4).clear().type('205105');\ncy.get(selectorsList.genericField).eq(5).clear().type('0768099909');\ncy.get(selectorsList.dateField).eq(0).clear().type('2028-23-04');\ncy.get(selectorsList.closeCalendaryButton).click();\ncy.get(selectorsList.dateField).eq(1).clear().type('1991-23-04');\ncy.get(selectorsList.closeCalendaryButton).click();\ncy.get(selectorsList.selectionField).eq(0).click();\ncy.get('.oxd-select-dropdown').contains('Brazilian').click();\ncy.get(selectorsList.selectionField).eq(1).click();\ncy.get('.oxd-select-dropdown').contains('Married').click();\ncy.get(selectorsList.submitButton).eq(0).click();\ncy.get('body').should('contain', 'Successfully Updated');",
+              "err": {},
+              "uuid": "32b755f9-9abb-4fd1-a094-2430a55c4cb3",
+              "parentUUID": "388f4a27-70ab-411d-9a9e-14608e336f00",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "32b755f9-9abb-4fd1-a094-2430a55c4cb3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18943,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ded2cfee-5b4c-4091-981e-4eb9fa947901",
+      "title": "",
+      "fullFile": "cypress\\e2e\\user.spec.cy.js",
+      "file": "cypress\\e2e\\user.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "848c40dd-7565-45fc-89b3-ea058885a30d",
+          "title": "Orange HRM Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User uptade walK - Login Sucess",
+              "fullTitle": "Orange HRM Tests User uptade walK - Login Sucess",
+              "timedOut": null,
+              "duration": 25667,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(selectorsList.usernameField).type(_userData.default.userSucess.username);\ncy.get(selectorsList.passwordField).type(_userData.default.userSucess.password);\ncy.get(selectorsList.loginButton).click();\ncy.location('pathname').should('equal', '/web/index.php/dashboard/index');\n//pode ser mudado o nome dashboard até para outra língua o que aconteceu troca\n//cy.get(selectorsList.sectionTitleTopBar).contains ('Dashboard');\ncy.get(selectorsList.dashboardGrid);\n// acessando alteração de Usuário\ncy.get(selectorsList.myInfoButton).click();\ncy.get(selectorsList.sectionTitleTopBar).contains('PIM'), cy.location('pathname').should('equal', '/web/index.php/pim/viewPersonalDetails/empNumber/7');\ncy.get(selectorsList.firstNameField).clear().type('Luiz');\ncy.get(selectorsList.middleNameField).clear().type('Carlos');\ncy.get(selectorsList.lastNameField).clear().type('Anjos');\ncy.get(selectorsList.genericField).eq(3).clear().type('QA-290305');\ncy.get(selectorsList.genericField).eq(4).clear().type('205105');\ncy.get(selectorsList.genericField).eq(5).clear().type('0768099909');\ncy.get(selectorsList.dateField).eq(0).clear().type('2028-23-04');\ncy.get(selectorsList.closeCalendaryButton).click();\ncy.get(selectorsList.dateField).eq(1).clear().type('1991-23-04');\ncy.get(selectorsList.closeCalendaryButton).click();\ncy.get(selectorsList.selectionField).eq(0).click();\ncy.get('.oxd-select-dropdown').contains('Brazilian').click();\ncy.get(selectorsList.selectionField).eq(1).click();\ncy.get('.oxd-select-dropdown').contains('Married').click();\ncy.get(selectorsList.submitButton).eq(0).click();\ncy.get('body').should('contain', 'Successfully Updated');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4000ms: `cy.clear()` failed because this element:\n\n`<input data-v-1f99f73c=\"\" class=\"oxd-input oxd-input--active orangehrm-firstname\" name=\"firstName\" placeholder=\"First Name\">`\n\nis being covered by another element:\n\n`<div data-v-c286b6e5=\"\" class=\"oxd-topbar-header-title\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4000ms: `cy.clear()` failed because this element:\n\n`<input data-v-1f99f73c=\"\" class=\"oxd-input oxd-input--active orangehrm-firstname\" name=\"firstName\" placeholder=\"First Name\">`\n\nis being covered by another element:\n\n`<div data-v-c286b6e5=\"\" class=\"oxd-topbar-header-title\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:115148:68)\n    at ensureDescendents (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:115199:5)\n    at ensureDescendentsAndScroll (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:115205:14)\n    at ensureElIsNotCovered (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:115336:5)\n    at runAllChecks (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:115535:52)\n    at retryActionability (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:115572:16)\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:4285:29)\n    at whenStable (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:152009:70)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:151924:14)\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1671:18)\n    at Promise._fulfill (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1615:18)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:5420:46)",
+                "diff": null
+              },
+              "uuid": "3d080a9d-1246-43a2-a30c-ff0a4dd035c9",
+              "parentUUID": "848c40dd-7565-45fc-89b3-ea058885a30d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "3d080a9d-1246-43a2-a30c-ff0a4dd035c9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 25667,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "c5d8efbf-5aac-44f2-b576-ec06975459b8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\user.spec.cy.js",
+      "file": "cypress\\e2e\\user.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8c07c3fc-f574-4d09-a241-08d4a8eea654",
+          "title": "Orange HRM Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User uptade walK - Login Sucess",
+              "fullTitle": "Orange HRM Tests User uptade walK - Login Sucess",
+              "timedOut": null,
+              "duration": 19387,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(selectorsList.usernameField).type(_userData.default.userSucess.username);\ncy.get(selectorsList.passwordField).type(_userData.default.userSucess.password);\ncy.get(selectorsList.loginButton).click();\ncy.location('pathname').should('equal', '/web/index.php/dashboard/index');\n//pode ser mudado o nome dashboard até para outra língua o que aconteceu troca\n//cy.get(selectorsList.sectionTitleTopBar).contains ('Dashboard');\ncy.get(selectorsList.dashboardGrid);\n// acessando alteração de Usuário\ncy.get(selectorsList.myInfoButton).click();\ncy.get(selectorsList.sectionTitleTopBar).contains('PIM'), cy.location('pathname').should('equal', '/web/index.php/pim/viewPersonalDetails/empNumber/7');\ncy.get(selectorsList.firstNameField).clear().type('Luiz');\ncy.get(selectorsList.middleNameField).clear().type('Carlos');\ncy.get(selectorsList.lastNameField).clear().type('Anjos');\ncy.get(selectorsList.genericField).eq(3).clear().type('QA-290305');\ncy.get(selectorsList.genericField).eq(4).clear().type('205105');\ncy.get(selectorsList.genericField).eq(5).clear().type('0768099909');\ncy.get(selectorsList.dateField).eq(0).clear().type('2028-23-04');\ncy.get(selectorsList.closeCalendaryButton).click();\ncy.get(selectorsList.dateField).eq(1).clear().type('1991-23-04');\ncy.get(selectorsList.closeCalendaryButton).click();\ncy.get(selectorsList.selectionField).eq(0).click();\ncy.get('.oxd-select-dropdown').contains('Brazilian').click();\ncy.get(selectorsList.selectionField).eq(1).click();\ncy.get('.oxd-select-dropdown').contains('Married').click();\ncy.get(selectorsList.submitButton).eq(0).click();\ncy.get('body').should('contain', 'Successfully Updated');",
+              "err": {},
+              "uuid": "eeaa2b07-f4c8-4063-9605-fc87b0c9d035",
+              "parentUUID": "8c07c3fc-f574-4d09-a241-08d4a8eea654",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "eeaa2b07-f4c8-4063-9605-fc87b0c9d035"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 19387,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.3.2"
+    }
+  }
+}
