@@ -20,7 +20,7 @@ describe('Orange HRM Tests', () => {
     pages.login.loginWithUser(userData.userSucess.username,userData.userSucess.password);
     pages.dashboard.dashboardWay();
     pages.menu.acessMyInfo();
-    pages.myInfo.fillPersonalDetails(chance.first(),chance.suffix(),chance.last());
+    pages.myInfo.fillPersonalDetails(chance.first(),faker.person.middleName(),chance.last());
     
     pages.myInfo.fillEmployeeDetails(faker.string.numeric(6),faker.string.numeric(5),faker.string.numeric(7),faker.date.future({ years: 5 }).toISOString().split('T')[0])
 

@@ -1,5 +1,5 @@
 import Chance from "chance";
-import { faker} from "@faker-js/faker";
+import { faker } from "@faker-js/faker";
 const chance = new Chance;
 
 class Utils {
@@ -26,6 +26,3 @@ class Utils {
 
 
 export default  Utils
-    
-
-
