@@ -1,11 +1,11 @@
-# 🧪 Suíte de Automação de Testes OrangeHRM 🚀
+# 🧪 OrangeHRM Test Automation Suite 🚀
 
-![Banner de Automação Cypress](file:///C:/Users/User/.gemini/antigravity/brain/03d00447-51a6-49cf-9e70-3f0d63c0a683/cypress_automation_banner_1775536780008.png)
+![Cypress Automation Banner](file:///C:/Users/User/.gemini/antigravity/brain/03d00447-51a6-49cf-9e70-3f0d63c0a683/cypress_automation_banner_1775536780008.png)
 
 [![Cypress](https://img.shields.io/badge/-Cypress-6DB33F?style=for-the-badge&logo=cypress&logoColor=white)](https://www.cypress.io/)
 [![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Node.js](https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
-[![Status](https://img.shields.io/badge/Status-Projeto%20Finalizado-brightgreen?style=for-the-badge)](https://github.com/luizanjos88)
+[![Status](https://img.shields.io/badge/Status-Project%20Finalized-brightgreen?style=for-the-badge)](https://github.com/luizanjos88)
 
 Este repositório contém uma suíte completa de testes automatizados End-to-End (E2E) para a plataforma **OrangeHRM**. O projeto foi desenvolvido com foco em escalabilidade, manutenibilidade e confiabilidade, utilizando as melhores práticas de Engenharia de QA.
 
@@ -80,6 +80,8 @@ npm run test:repeat
 Após a execução do comando `npm run report`, um arquivo interativo será gerado em:
 `cypress/reports/mochawesome.html`
 
+*Abra este arquivo em seu navegador para ver logs detalhados, tempo de execução e capturas de tela das falhas.*
+
 ---
 
 ## 🛠️ Tecnologias de Elite
@@ -89,7 +91,7 @@ Após a execução do comando `npm run report`, um arquivo interativo será gera
 | **Cypress 15** | Framework de Testes E2E |
 | **Faker.js** | Geração de massa de dados realista |
 | **Chance** | Helpers de aleatoriedade |
-| **Mochawesome** | Reporting Visual |
+| **Mchawesome** | Reporting Visual |
 | **JavaScript** | Linguagem Base |
 
 ---
@@ -102,3 +104,5 @@ QA Automation Engineer em constante evolução.
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luizcarloos)
 [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/luizanjos88)
 
+---
+*Este projeto faz parte do meu portfólio de testes automatizados. Sinta-se à vontade para explorar e sugerir melhorias!*

@@ -1,86 +1,106 @@
-# Cypress E2E Testing for OrangeHRM
+# 🧪 OrangeHRM Test Automation Suite 🚀
 
-This project is an automated End-to-End (E2E) testing framework designed for the **OrangeHRM** application, focusing specifically on user authentication, dashboard navigation, and admin module functionalities (such as user management).
+![Cypress Automation Banner](file:///C:/Users/User/.gemini/antigravity/brain/03d00447-51a6-49cf-9e70-3f0d63c0a683/cypress_automation_banner_1775536780008.png)
 
-Built with **Cypress**, this repository leverages modern software testing patterns, including the **Page Object Model (POM)** for improved code maintainability and reusability, and utilizes mock data generators to ensure robust test coverage.
+[![Cypress](https://img.shields.io/badge/-Cypress-6DB33F?style=for-the-badge&logo=cypress&logoColor=white)](https://www.cypress.io/)
+[![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Node.js](https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Status](https://img.shields.io/badge/Status-Project%20Finalized-brightgreen?style=for-the-badge)](https://github.com/luizanjos88)
 
-## 🚀 Key Features
+This repository contains a comprehensive End-to-End (E2E) automated testing suite for the **OrangeHRM** platform. The project was developed with a focus on scalability, maintainability, and reliability, following QA Engineering best practices.
 
-- **Page Object Model (POM):** Clean separation between test logic and element locators within the `cypress/pages` directory.
-- **Dynamic Data Generation:** Integration of `@faker-js/faker` and `chance` libraries to create varied, realistic test data dynamically (e.g., generating distinct usernames and passwords).
-- **Automated Reporting:** Includes Mochawesome report generator to output beautiful, easy-to-read HTML testing reports.
-- **Repeat Testing:** Leverages `cypress-repeat` allowing you to re-run test suites multiple times automatically to check for test flakiness.
+---
 
-## 🛠️ Technology Stack
+## 🎯 Project Objective
 
-- **[Cypress](https://www.cypress.io/):** Next-generation front-end testing tool built for the modern web.
-- **[Chance.js](https://chancejs.com/):** Random generator helper for Javascript.
-- **[Faker JS](https://fakerjs.dev/):** Generate massive amounts of fake (but realistic) data for testing.
-- **[Mochawesome](https://github.com/adamgruber/mochawesome):** Custom HTML reporter for Cypress.
+Validate core user journeys within the OrangeHRM system, ensuring that critical functionalities (Login, User Management, PIM, My Info) operate correctly across various scenarios, minimizing regression risks and increasing code confidence.
 
-## 📂 Project Structure
+## ✨ Technical Highlights
+
+- **🏛️ Page Object Model (POM):** Strict implementation for separation of concerns, ensuring that UI changes don't break tests across the board.
+- **🎲 Random Data Generation:** Leverages `@faker-js/faker` and `Chance.js` to create unique users, IDs, and profile data for every execution.
+- **📊 Detailed Reporting:** Integrated with **Mochawesome** to generate interactive visual reports that streamline failure analysis.
+- **🛡️ Stability Testing:** Configured with `cypress-repeat` to detect *flaky tests* through multiple executions.
+- **🛠️ Custom Commands & Utils:** Optimized helper functions for handling complex date pickers and UI elements.
+
+---
+
+## 📂 Ecosystem Structure
 
 ```text
 ├── cypress/
-│   ├── e2e/               # Test specification files (*.spec.cy.js)
-│   │   ├── admin.spec.cy.js
-│   │   ├── login.spec.cy.js
-│   │   └── user.spec.cy.js
-│   ├── pages/             # Page Object Model classes
-│   │   ├── adminPage.js
-│   │   ├── dashboardPage.js
-│   │   └── ...
-│   └── reports/           # Generated Test Reports
-├── package.json           # Node.js dependencies and custom npm scripts
-└── cypress.config.js      # Main Cypress configuration file
+│   ├── e2e/               # Test Specs (BDD-style scenarios)
+│   │   ├── admin.spec.cy.js    # Administrator management
+│   │   ├── login.spec.cy.js    # Authentication flows
+│   │   ├── pimAdd.spec.cy.js   # New employee registration
+│   │   └── user.spec.cy.js     # User profile and info
+│   ├── pages/             # Page Objects (UI Abstraction)
+│   │   ├── loginPage.js        # Login interactions
+│   │   ├── pimPage.js          # PIM forms
+│   │   └── utils.js            # Global helpers
+│   └── reports/           # HTML Reports (Execution snapshots)
+├── package.json           # Scripts & Dependencies
+└── cypress.config.js      # Engine Configuration
 ```
 
-## ⚙️ Prerequisites
+---
 
-To run this project, make sure you have the following installed on your machine:
-- **[Node.js](https://nodejs.org/en)** (version 14 or higher recommended)
-- **NPM** (which comes with Node.js)
+## 🚀 How to Run
 
-## 📦 Installation
+### 1. Clone and Install
+```bash
+git clone https://github.com/luizanjos88/primeiro-passos-cypress.git
+cd primeiro-passos-cypress
+npm install
+```
 
-1. **Clone the repository** (if applicable) or navigate to the project directory:
-   ```bash
-   cd primeiro-passos-cypress
-   ```
-
-2. **Install the dependencies:**
-   ```bash
-   npm install
-   ```
-
-## ▶️ Running Tests
-
-### Open the Cypress UI (Interactive Mode)
-To run tests using the interactive Cypress Test Runner:
+### 2. Run Tests (Interactive)
+Ideal for development and debugging.
 ```bash
 npx cypress open
 ```
 
-### Run Tests in Headless Mode
-To execute the tests in the background (headless mode) without opening a browser GUI:
+### 3. Run Tests (Headless Mode + Report)
+Ideal for Continuous Integration (CI).
 ```bash
 npx cypress run
+npm run report
 ```
 
-### Run Flaky Test Checks (Multiple Executions)
-If you wish to run your tests multiple times in a row to catch flaky tests:
+### 4. Check Stability
+Runs the tests 5 consecutive times to ensure no intermittency.
 ```bash
 npm run test:repeat
 ```
 
-## 📊 Generating Reports
+---
 
-We use Mochawesome for test run reports. After running your tests in headless mode (`npx cypress run`), you can merge the resulting JSON outputs and generate a detailed HTML report:
+## 📊 Viewing Results
 
-```bash
-npm run report
-```
-This command merges all JSON files located in `cypress/reports/` and builds an interactive HTML file that you can open in your browser to view the test execution results.
+After running the `npm run report` command, an interactive file will be generated at:
+`cypress/reports/mochawesome.html`
+
+---
+
+## 🛠️ Elite Tech Stack
+
+| Tool | Purpose |
+| :--- | :--- |
+| **Cypress 15** | E2E Testing Framework |
+| **Faker.js** | Realistic Data Generation |
+| **Chance** | Randomness Helpers |
+| **Mochawesome** | Visual Reporting |
+| **JavaScript** | Base Language |
+
+---
 
 ## 👨‍💻 Author
+
 **Luiz Carlos**
+QA Automation Engineer constantly evolving.
+
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luizcarloos)
+[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/luizanjos88)
+
+---
+*This project is part of my automated testing portfolio. Feel free to explore and suggest improvements!*

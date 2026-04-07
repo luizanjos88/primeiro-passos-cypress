@@ -8,10 +8,8 @@ class AdminPage {
     }
 
     checkAdminPage() {
-        // Valida que estamos na URL correta da página de admin
-        cy.location('pathname').should('equal', '/web/index.php/admin/viewSystemUsers');
 
-        // Verifica se a página Admin renderizou os textos e elementos principais
+        cy.location('pathname').should('equal', '/web/index.php/admin/viewSystemUsers');
         cy.contains('System Users').should('be.visible');
         cy.contains('Admin').should('be.visible');
     }
